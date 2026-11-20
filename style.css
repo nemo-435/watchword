@@ -1,0 +1,124 @@
+/* Watchword — night dial: charcoal, sand ink, a touch of lume. */
+:root {
+  --dial: #1d1e20;
+  --surface: #2a2c2f;
+  --ink: #e6decf;
+  --muted: rgba(230, 222, 207, 0.62);
+  --hairline: rgba(230, 222, 207, 0.16);
+  --lume: #a9e2b8;
+  --serif: ui-serif, "New York", Georgia, "Times New Roman", serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--dial); }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.6;
+  background: radial-gradient(ellipse at 50% 0%, var(--surface) 0%, var(--dial) 60%);
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 56px 24px 72px;
+}
+
+.caption {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 56px;
+}
+
+nav a { text-decoration: none; }
+nav .links a { margin-left: 20px; }
+nav a.home { color: var(--ink); }
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--lume);
+  box-shadow: 0 0 10px rgba(169, 226, 184, 0.6);
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  margin: 0 0 12px;
+}
+
+h2 {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 44px 0 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--hairline);
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 19px;
+  margin: 28px 0 6px;
+}
+
+p, li { color: var(--ink); }
+.lede { color: var(--muted); font-size: 20px; font-style: italic; }
+
+a { color: var(--lume); text-underline-offset: 3px; }
+
+ul { padding-left: 1.2em; }
+
+.hero { text-align: center; }
+.hero img {
+  width: 128px;
+  height: 128px;
+  margin-bottom: 28px;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
+}
+
+.card {
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  padding: 20px 22px;
+  margin: 28px 0;
+}
+
+footer {
+  margin-top: 64px;
+  padding-top: 20px;
+  border-top: 1px solid var(--hairline);
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  h1 { font-size: 32px; }
+  nav .links a { margin-left: 14px; }
+}
